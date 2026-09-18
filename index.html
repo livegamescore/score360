@@ -57,18 +57,18 @@ only when you use the corresponding feature.</p>
 <tr><td>Favourite teams and leagues, saved matches, search history</td><td>As you use the app</td><td>Used to personalise your feed and reminders. Search history can be cleared in the app.</td></tr>
 <tr><td>Content you post</td><td>If you post</td><td>Tips, comments, likes, shared tip slips, follows, content reports and user blocks. Tips and slips are <strong>public</strong> and shown with your display name.</td></tr>
 <tr><td>Advisor answers</td><td>If you complete the “Personal advisor” questionnaire</td><td>Seven multiple-choice answers about your preferences (risk appetite, markets, picks per day). Used only to derive your suggested strategy.</td></tr>
-<tr><td>Mobile-money details</td><td>If you pay with M-Pesa</td><td>Your M-Pesa phone number, the amount and the transaction id. We store no other financial information.</td></tr>
+<tr><td>Mobile-money details</td><td>If you pay by mobile money</td><td>Your mobile-money phone number, the amount and the transaction id. We store no other financial information.</td></tr>
 </table>
 
 <h3>Data collected automatically</h3>
 <table>
-<tr><th>Data</th><th>Collected by</th><th>Details</th></tr>
-<tr><td>Push notification token, platform, language</td><td>Firebase Cloud Messaging</td><td>Only if you allow notifications. Used to deliver the categories you switch on (results, followed tipsters, kick-off reminders, goal alerts); each can be turned off in the app.</td></tr>
-<tr><td>Subscription status and order reference</td><td>RevenueCat, Google Play, App Store</td><td>If you subscribe. Purchases are processed by Google or Apple — we <strong>never receive your card details</strong>.</td></tr>
-<tr><td>App usage events</td><td>Firebase Analytics</td><td>Screens opened and features used, app version, device model, OS version, approximate country (from IP address), and a Firebase app-instance id. Used in aggregate to understand and improve the app.</td></tr>
-<tr><td>Crash reports and performance data</td><td>Firebase Crashlytics, Firebase Performance Monitoring</td><td>Stack traces, device model, OS and app version, memory and network timings at the time of a crash or slow screen. Used to find and fix bugs.</td></tr>
-<tr><td>Advertising ID and device information</td><td>Google Mobile Ads (AdMob)</td><td>Free users only. Used to show and measure ads. See “Advertising” below.</td></tr>
-<tr><td>IP address and request logs</td><td>Our servers, Cloudflare</td><td>Kept briefly for security, abuse prevention and error diagnosis.</td></tr>
+<tr><th>Data</th><th>Source</th><th>Details</th></tr>
+<tr><td>Push notification token, platform, language</td><td>Push notification service</td><td>Only if you allow notifications. Used to deliver the categories you switch on (results, followed tipsters, kick-off reminders, goal alerts); each can be turned off in the app.</td></tr>
+<tr><td>Subscription status and order reference</td><td>Google Play, App Store and our billing processor</td><td>If you subscribe. Purchases are processed by Google or Apple — we <strong>never receive your card details</strong>.</td></tr>
+<tr><td>App usage events</td><td>Analytics service</td><td>Screens opened and features used, app version, device model, OS version, approximate country (from IP address), and an app-instance identifier. Used in aggregate to understand and improve the app.</td></tr>
+<tr><td>Crash reports and performance data</td><td>Crash-reporting and performance service</td><td>Stack traces, device model, OS and app version, memory and network timings at the time of a crash or slow screen. Used to find and fix bugs.</td></tr>
+<tr><td>Advertising ID and device information</td><td>Advertising network</td><td>Free users only. Used to show and measure ads. See “Advertising” below.</td></tr>
+<tr><td>IP address and request logs</td><td>Our servers and network-security service</td><td>Kept briefly for security, abuse prevention and error diagnosis.</td></tr>
 </table>
 
 <p>We do <strong>not</strong> access or collect your precise location, contacts, SMS, call logs, installed
@@ -88,23 +88,24 @@ are: performance of our contract with you; our legitimate interests in running a
 your consent for notifications, Google sign-in and personalised advertising, which you can withdraw at any time.</p>
 
 <h2 id="sharing">3. Who we share it with</h2>
-<p>We do <strong>not sell</strong> personal data. We share it only with the service providers below, who
-process it on our behalf to run the app, and where the law requires disclosure.</p>
+<p>We do <strong>not sell</strong> personal data. We share it only with the categories of service providers
+below, who process it on our behalf and under contract to run the app, and where the law requires
+disclosure. Each is bound to use the data only for the purpose we engage it for.</p>
 <table>
-<tr><th>Provider</th><th>Purpose</th><th>Data</th><th>Their privacy policy</th></tr>
-<tr><td>DigitalOcean (hosts our Supabase database, EU region)</td><td>Accounts, database, avatar storage</td><td>Account, profile, favourites, content, advisor answers, push settings</td><td><a href="https://www.digitalocean.com/legal/privacy-policy">DigitalOcean</a></td></tr>
-<tr><td>Google Firebase (Cloud Messaging, Analytics, Crashlytics, Performance)</td><td>Notifications, analytics, crash and performance reports</td><td>Push token, usage events, crash logs, device info, app-instance id</td><td><a href="https://firebase.google.com/support/privacy">Firebase</a></td></tr>
-<tr><td>Google Mobile Ads (AdMob)</td><td>Advertising to free users</td><td>Advertising ID, device info, approximate location from IP address</td><td><a href="https://policies.google.com/technologies/partner-sites">How Google uses data</a></td></tr>
-<tr><td>Google Sign-In</td><td>Authentication</td><td>Email, name, photo (with your permission)</td><td><a href="https://policies.google.com/privacy">Google</a></td></tr>
-<tr><td>RevenueCat, Google Play Billing, App Store</td><td>Subscription billing</td><td>Order reference, subscription status</td><td><a href="https://www.revenuecat.com/privacy">RevenueCat</a></td></tr>
-<tr><td>Safaricom (M-Pesa)</td><td>Mobile-money payments</td><td>Phone number, amount, transaction id</td><td><a href="https://www.safaricom.co.ke/data-privacy-statement">Safaricom</a></td></tr>
-<tr><td>Cloudflare</td><td>Network security and delivery</td><td>IP address, request metadata</td><td><a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a></td></tr>
-<tr><td>Sentry</td><td>Server error diagnosis</td><td>Server error reports that may include your account id — never your content or payment data</td><td><a href="https://sentry.io/privacy/">Sentry</a></td></tr>
+<tr><th>Type of provider</th><th>Purpose</th><th>Data shared</th></tr>
+<tr><td>Cloud hosting and database</td><td>Store accounts, profiles and app data (servers in the European Union)</td><td>Account, profile, avatar, favourites, content, advisor answers, notification settings</td></tr>
+<tr><td>Push notification service</td><td>Deliver the notifications you switch on</td><td>Push token, notification content</td></tr>
+<tr><td>Analytics, crash-reporting and performance services</td><td>Understand how the app is used; find and fix bugs</td><td>Usage events, crash logs, device information, app-instance identifier</td></tr>
+<tr><td>Advertising network</td><td>Show and measure ads to free users</td><td>Advertising ID, device information, approximate location from IP address</td></tr>
+<tr><td>Sign-in provider (Google)</td><td>Let you sign in with your Google account, if you choose to</td><td>Email, name, photo (with your permission)</td></tr>
+<tr><td>App stores and billing processor</td><td>Process and verify subscription purchases</td><td>Order reference, subscription status</td></tr>
+<tr><td>Mobile-money operator</td><td>Process mobile-money payments</td><td>Phone number, amount, transaction id</td></tr>
+<tr><td>Network-security and error-monitoring services</td><td>Protect the service from attacks and diagnose server errors</td><td>IP address, request metadata, server error reports that may include your account id — never your content or payment data</td></tr>
 </table>
 
 <h3 id="ads">Advertising</h3>
-<p>Free users may see ads served by Google AdMob. AdMob may use your device’s advertising ID to show ads that
-are more relevant to you and to measure them. You can reset your advertising ID or opt out of personalised
+<p>Free users may see ads served by a third-party advertising network, which may use your device’s
+advertising ID to show ads that are more relevant to you and to measure them. You can reset your advertising ID or opt out of personalised
 ads at any time in your device settings (Android: <em>Settings → Google → Ads</em>; iOS: <em>Settings →
 Privacy &amp; Security → Tracking</em>). Premium subscribers see no ads.</p>
 
@@ -113,7 +114,7 @@ Privacy &amp; Security → Tracking</em>). Premium subscribers see no ads.</p>
   <li>All data sent between the app and our servers is <strong>encrypted in transit</strong> using TLS.</li>
   <li>Every database table is protected by row-level access rules, so an account can only read or change its own data; server-side access uses restricted credentials.</li>
   <li>Passwords are never stored in readable form — only as salted hashes. With Google sign-in we never receive a password at all.</li>
-  <li>Payments are handled by Google, Apple, RevenueCat and Safaricom — we never see card numbers.</li>
+  <li>Payments are handled by the app stores and payment processors — we never see card numbers.</li>
   <li>Access to production systems is limited to the people who operate them. Backups are kept in the same restricted environment.</li>
 </ul>
 <p>If we become aware of a breach affecting your data we will notify you and the relevant authorities as the
@@ -125,8 +126,8 @@ law requires.</p>
 <tr><td>Account, profile, favourites, content, advisor answers, search history</td><td>Until you delete your account (section 7), then deleted immediately.</td></tr>
 <tr><td>Guest accounts that never saved anything</td><td>Deleted automatically after 90 days of inactivity.</td></tr>
 <tr><td>Push tokens</td><td>Until the device stops accepting notifications, you uninstall, or you delete your account.</td></tr>
-<tr><td>Payment records (order references, M-Pesa transaction ids)</td><td>As long as tax and accounting law requires, then deleted. Retained after account deletion for that reason only.</td></tr>
-<tr><td>Analytics / crash data (Firebase)</td><td>Up to 14 months / 90 days, then deleted by Firebase.</td></tr>
+<tr><td>Payment records (order references, mobile-money transaction ids)</td><td>As long as tax and accounting law requires, then deleted. Retained after account deletion for that reason only.</td></tr>
+<tr><td>Analytics / crash data</td><td>Up to 14 months / 90 days, then deleted automatically.</td></tr>
 <tr><td>Server logs and backups</td><td>Logs a few days; backups up to 30 days, after which deleted data is gone from them too.</td></tr>
 </table>
 
